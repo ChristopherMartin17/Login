@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="log.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-box">
+      <div class="logo-container">
+        <h1>Iniciar Sesión</h1>
+      </div>
+
+      <form id="formLogin">
+        <div class="form-group">
+          <label for="correo">Correo electrónico</label>
+          <div class="input-with-icon">
+            <i class="fas fa-envelope"></i>
+            <input type="email" id="correo" placeholder="ejemplo@correo.com" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="clave">Contraseña</label>
+          <div class="input-with-icon">
+            <i class="fas fa-lock"></i>
+            <input type="password" id="clave" placeholder="Tu contraseña" required>
+          </div>
+        </div>
+        <button type="submit" class="btn-submit">Iniciar sesión</button>
+      </form>
+
+      <div class="social-login">
+        <p>O inicia sesión con:</p>
+        <div class="social-buttons">
+          <button class="social-btn google" id="googleLogin">
+            <i class="fab fa-google"></i> Google
+          </button>
+          <button class="social-btn facebook" id="facebookLogin">
+            <i class="fab fa-facebook-f"></i> Facebook
+          </button>
+        </div>
+      </div>
+
+      <div class="register">
+        ¿No tienes cuenta? <a href="#" id="registerLink">Regístrate aquí</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="log.js"></script>
+</body>
+</html>
